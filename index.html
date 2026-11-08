@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planet Runner · Privacy &amp; Support</title>
+<style>
+:root{--bg:#10211d;--panel:#18302a;--text:#f4f1e4;--dim:#b9c6bd;--gold:#ffc85c;--line:#2d4a41}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:32px 20px 64px}
+h1{color:var(--gold);font-size:34px;line-height:1.2;margin:0 0 6px;letter-spacing:.02em}
+h2{font-size:22px;margin:0 0 10px;color:var(--gold)}
+h3{font-size:17px;margin:18px 0 4px}
+p,ul{margin:0 0 12px}
+.sub{color:var(--dim);margin-bottom:20px}
+nav{display:flex;gap:8px;margin-bottom:24px}
+button{font:inherit;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 16px;cursor:pointer}
+button[aria-pressed=true]{border-color:var(--gold);color:var(--gold)}
+section{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:16px}
+a{color:var(--gold)}
+.small{color:var(--dim);font-size:15px}
+[data-lang]{display:none}
+html[lang=de] [data-lang=de],html[lang=en] [data-lang=en]{display:block}
+</style>
+</head>
+<body>
+<main>
+<h1>PLANET RUNNER</h1>
+<nav aria-label="Language / Sprache">
+<button id="b-de" type="button" onclick="setLang('de')">Deutsch</button>
+<button id="b-en" type="button" onclick="setLang('en')">English</button>
+</nav>
+
+<div data-lang="de">
+<p class="sub">Datenschutz, Impressum und Support</p>
+<section id="datenschutz">
+<h2>Datenschutzerklärung</h2>
+<p class="small">Stand: 8. November 2026</p>
+<p>Planet Runner erhebt keine personenbezogenen Daten. Das Spiel funktioniert ohne Internetverbindung und ohne Konto.</p>
+<h3>Daten auf deinem Gerät</h3>
+<p>Spielstände, Rekorde, Abzeichen und Einstellungen werden nur auf deinem Gerät gespeichert und nicht an uns übertragen. Wenn du die App löschst, werden auch diese Daten gelöscht.</p>
+<h3>Keine Werbung, kein Tracking</h3>
+<p>Das Spiel enthält keine Werbung, keine Analysewerkzeuge und keine In-App-Käufe.</p>
+<h3>App-Stores</h3>
+<p>Beim Kauf und Herunterladen verarbeitet der jeweilige Store (zum Beispiel Apple oder Google) Daten nach seinen eigenen Datenschutzbestimmungen. Darauf haben wir keinen Einfluss.</p>
+<h3>Deine Rechte</h3>
+<p>Du hast nach der DSGVO das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung sowie das Recht auf Beschwerde bei einer Aufsichtsbehörde. In Belgien ist das die Datenschutzbehörde (Autorité de protection des données / Gegevensbeschermingsautoriteit).</p>
+<h3>Änderungen</h3>
+<p>Falls eine spätere Version Daten überträgt, zum Beispiel für freiwillige Online-Bestenlisten, wird diese Erklärung vorher angepasst.</p>
+</section>
+<section id="impressum">
+<h2>Impressum</h2>
+<p>Sanel Basic<br>Prümer Straße 27<br>4780 Sankt Vith<br>Belgien</p>
+<p>E-Mail: <a href="mailto:basicsanel87@gmail.com">basicsanel87@gmail.com</a></p>
+</section>
+<section id="support">
+<h2>Support</h2>
+<p>Fragen oder Probleme mit dem Spiel? Schreib an <a href="mailto:basicsanel87@gmail.com">basicsanel87@gmail.com</a>. Bitte nenne dein Gerät und die App-Version.</p>
+</section>
+</div>
+
+<div data-lang="en">
+<p class="sub">Privacy, legal notice and support</p>
+<section id="privacy">
+<h2>Privacy policy</h2>
+<p class="small">Updated: November 8, 2026</p>
+<p>Planet Runner does not collect personal data. The game works without an internet connection and without an account.</p>
+<h3>Data on your device</h3>
+<p>Saved games, records, badges and settings are stored only on your device and are not sent to us. Deleting the app deletes this data as well.</p>
+<h3>No ads, no tracking</h3>
+<p>The game contains no advertising, no analytics tools and no in-app purchases.</p>
+<h3>App stores</h3>
+<p>When you buy and download the game, the store involved (for example Apple or Google) processes data under its own privacy policy. We have no influence over this.</p>
+<h3>Your rights</h3>
+<p>Under the GDPR you have the right of access, rectification, erasure and restriction, and the right to lodge a complaint with a supervisory authority. In Belgium this is the Data Protection Authority.</p>
+<h3>Changes</h3>
+<p>If a later version transmits data, for example for optional online leaderboards, this policy will be updated first.</p>
+</section>
+<section id="legal">
+<h2>Legal notice</h2>
+<p>Sanel Basic<br>Prümer Straße 27<br>4780 Saint Vith<br>Belgium</p>
+<p>Email: <a href="mailto:basicsanel87@gmail.com">basicsanel87@gmail.com</a></p>
+</section>
+<section id="help">
+<h2>Support</h2>
+<p>Questions or problems with the game? Write to <a href="mailto:basicsanel87@gmail.com">basicsanel87@gmail.com</a>. Please mention your device and the app version.</p>
+</section>
+</div>
+</main>
+<script>
+function setLang(l){
+  document.documentElement.lang=l;
+  document.getElementById('b-de').setAttribute('aria-pressed',l==='de');
+  document.getElementById('b-en').setAttribute('aria-pressed',l==='en');
+}
+setLang(location.hash==='#en'?'en':location.hash==='#de'?'de':((navigator.language||'').slice(0,2)==='de'?'de':'en'));
+</script>
+</body>
+</html>
